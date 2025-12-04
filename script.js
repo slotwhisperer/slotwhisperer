@@ -1,8 +1,2 @@
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href'))
-                .scrollIntoView({ behavior: 'smooth' });
-    });
-});
+// Simple JS placeholder – you can add animations or loaders later.
+console.log("Slot Whisperer website loaded.");
