@@ -1,2 +1,2 @@
-# -Blackbeard-create.github.io
-slotwhisperer
+# SlotWhisperer
+Official website project
