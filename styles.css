@@ -1,104 +1,186 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #111;
-    color: #fff;
-    line-height: 1.6;
+    margin: 0;
+    background: #0a0a0a;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* HERO SECTION */
-.hero {
-    position: relative;
-    height: 90vh;
-    overflow: hidden;
-}
-
-.hero-img {
+/* HEADER */
+header {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.55;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+header nav a {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+header nav a:hover {
+    color: #00eaff;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url("images/slotwhisperer-hero.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top:0; left:0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.55);
 }
 
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 2;
     max-width: 700px;
 }
 
 .hero h1 {
-    font-size: 2.6rem;
-    font-weight: bold;
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 14px 30px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 10px;
+    display: inline-block;
+    transition: 0.25s;
+}
+
+.btn-primary {
+    background: #00eaff;
+    color: #000;
+}
+
+.btn-secondary {
+    border: 2px solid #00eaff;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: scale(1.05);
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.section.dark {
+    background: #111;
+}
+
+.section h2 {
+    font-size: 36px;
     margin-bottom: 15px;
 }
 
-.hero-sub {
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-    color: #ddd;
+.section-subtitle {
+    font-size: 16px;
+    opacity: 0.7;
+    margin-bottom: 40px;
 }
 
-.cta-btn {
-    padding: 12px 28px;
-    background: #ffbf00;
-    color: #111;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.cta-btn:hover {
-    background: #e0a900;
-}
-
-/* ABOUT */
-.about {
-    padding: 50px 20px;
-    text-align: center;
+/* VIDEO */
+.video-wrapper {
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto;
 }
 
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.video-wrapper iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
 }
 
-/* VIDEOS */
-.videos {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.video-grid {
-    margin-top: 30px;
+/* BONUSES */
+.bonus-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
 
-.video-card iframe {
-    width: 100%;
-    height: 180px;
+.bonus-card {
+    background: #1a1a1a;
+    padding: 25px;
     border-radius: 10px;
-    border: none;
+    border: 2px solid #00eaff;
+}
+
+.bonus-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #00eaff;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* ABOUT */
+.about-text {
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* SOCIAL */
+.socials a {
+    margin: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #00eaff;
 }
 
 /* FOOTER */
 footer {
-    padding: 20px;
     text-align: center;
+    padding: 30px;
     background: #000;
-    margin-top: 40px;
-    border-top: 1px solid #222;
+    opacity: 0.7;
+}
+
+footer .disclaimer {
+    font-size: 12px;
+    opacity: 0.5;
 }
