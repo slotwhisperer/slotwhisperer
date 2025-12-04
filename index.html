@@ -3,134 +3,138 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SlotWhisperer — Professional Button Pusher</title>
+  <title>SlotWhisperer — Play Smart</title>
+  <link rel="icon" href="images/favicon.png">
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="images/slot-icon.png" />
-  <meta name="description" content="SlotWhisperer — slot playthroughs, honest casino reviews, crypto deposit guides, and bonus drops." />
+  <meta name="description" content="SlotWhisperer — slot playthroughs, honest casino reviews, bonus drops and strategy." />
 </head>
 <body>
 
-  <!-- Custom cursor element (fallback if CSS cursor fails) -->
-  <div id="custom-cursor" aria-hidden="true"></div>
+  <!-- fixed header / navbar -->
+  <header class="navbar">
+    <div class="nav-inner container">
+      <a class="brand" href="index.html"><img src="images/logo.png" alt="SlotWhisperer" class="logo"><span>SlotWhisperer</span></a>
 
-<!-- HEADER / NAVBAR -->
-<header class="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="Slot Whisperer Logo">
-        </a>
+      <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+        <a href="#home">Home</a>
+        <a href="#bonuses">Bonuses</a>
+        <a href="#casinos">Casinos</a>
+        <a href="#slots">Slots</a>
+        <a href="#guides">Guides</a>
+        <a href="#watch">Watch</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-        <nav class="nav-links" id="navLinks">
-            <a href="index.html">Home</a>
-            <a href="#bonuses">Bonuses</a>
-            <a href="#casinos">Casinos</a>
-            <a href="#slots">Slots</a>
-            <a href="#guides">Guides</a>
-            <a href="#watch">Watch</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+      <button id="hamburger" class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-</header>
+  </header>
 
   <!-- HERO -->
   <section id="home" class="hero">
-    <div class="hero-bg" role="img" aria-hidden="true"></div>
-
-    <!-- moving reel animation -->
-    <div class="reel-wrapper" aria-hidden="true">
-      <div class="reel">
-        <div class="reel-strip">
-          <div class="symbol">🍒</div><div class="symbol">7</div><div class="symbol">🔔</div>
-          <div class="symbol">💎</div><div class="symbol">🍋</div><div class="symbol">⭐</div>
-        </div>
-      </div>
-      <div class="reel">
-        <div class="reel-strip">
-          <div class="symbol">7</div><div class="symbol">🍒</div><div class="symbol">💎</div>
-          <div class="symbol">🔔</div><div class="symbol">⭐</div><div class="symbol">🍋</div>
-        </div>
-      </div>
-      <div class="reel">
-        <div class="reel-strip">
-          <div class="symbol">🔔</div><div class="symbol">💎</div><div class="symbol">7</div>
-          <div class="symbol">🍒</div><div class="symbol">🍋</div><div class="symbol">⭐</div>
-        </div>
-      </div>
-    </div>
-
+    <div class="hero-overlay"></div>
     <div class="hero-inner container">
-      <h1 class="hero-title">I Talk to Slot Machines… <span class="accent">and Sometimes They Talk Back.</span></h1>
-      <p class="hero-sub">Let me show you what they’re really saying. I’m the SlotWhisperer — Professional Button Pusher.</p>
+      <div class="hero-badge">SMART PLAY INSIGHTS</div>
+      <h1 class="hero-title">I talk to slot machines… and sometimes they talk back.<br><span class="hero-accent">Let me show you what they’re really saying.</span></h1>
+      <p class="hero-sub">Slot Whisperer gives players clarity, confidence, and data-driven insights to maximize their casino experience. We don't promise wins — we teach smart play.</p>
 
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://www.youtube.com/watch?v=AaZK5l-dY4E" target="_blank" rel="noopener">🎥 Watch Latest</a>
-        <a class="btn btn-ghost" href="#bonuses">💰 Claim Bonuses</a>
-      </div>
-
-      <div class="hero-meta">
-        <span>USDT payouts</span>
-        <span>Weekly drops</span>
-        <span>No BS reviews</span>
+      <div class="hero-ctas">
+        <a class="btn primary" href="https://www.youtube.com/watch?v=AaZK5l-dY4E" target="_blank" rel="noopener">🎥 Watch Latest</a>
+        <a class="btn outline" href="#bonuses">💰 View Bonuses</a>
       </div>
     </div>
   </section>
 
-  <!-- VIDEOS / Auto-feed (uses channel handle fallback) -->
-  <section id="videos" class="section">
-    <div class="container">
-      <h2>Latest Uploads</h2>
-      <p class="muted">Auto-loading the newest videos from the channel.</p>
-
-      <div id="ytFeed" class="yt-grid">
-        <!-- JS will populate video cards here from channel URL or playlist fallback -->
-        <div class="yt-placeholder">Loading videos…</div>
+  <!-- "Choose your Winning Path" features (three columns) -->
+  <section class="features section">
+    <div class="container features-grid">
+      <div class="feature-card">
+        <h3>Top Casino Reviews</h3>
+        <p>Unbiased, deep-dive analysis of the highest-rated crypto and fiat casinos.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Exclusive Bonuses</h3>
+        <p>Secret codes and VIP welcome packages you won't find anywhere else.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Slot Game Guides</h3>
+        <p>RTP breakdowns, volatility guides, and strategy for top slots.</p>
       </div>
     </div>
   </section>
 
-  <!-- BONUS TABLE -->
-  <section id="bonuses" class="section dark">
+  <!-- VLOG / WATCH GRID -->
+  <section id="watch" class="section dark">
     <div class="container">
-      <h2>Top Casino Bonuses — Quick Comparison</h2>
+      <h2 class="section-title">Watch — Latest Vlogs</h2>
+      <div class="vlog-grid">
+        <article class="vlog-card">
+          <figure><img src="images/thumb1.jpg" alt=""></figure>
+          <div class="vlog-meta">
+            <time>12:34</time>
+            <span>3.2k views</span>
+          </div>
+          <h3>How RTP Really Works: The Math Behind Your Odds</h3>
+        </article>
+
+        <article class="vlog-card">
+          <figure><img src="images/thumb2.jpg" alt=""></figure>
+          <div class="vlog-meta">
+            <time>15:22</time>
+            <span>2.8k views</span>
+          </div>
+          <h3>Volatility Cycles Explained: When to Hold & When to Fold</h3>
+        </article>
+
+        <article class="vlog-card">
+          <figure><img src="images/thumb3.jpg" alt=""></figure>
+          <div class="vlog-meta">
+            <time>18:45</time>
+            <span>4.1k views</span>
+          </div>
+          <h3>Casino Psychology: Why You Keep Playing (And How to Stop)</h3>
+        </article>
+      </div>
+
+      <div class="center"><a class="btn ghost" href="https://www.youtube.com/@slotwhisperer222" target="_blank">View All Vlogs</a></div>
+    </div>
+  </section>
+
+  <!-- BONUSES table -->
+  <section id="bonuses" class="section">
+    <div class="container">
+      <h2 class="section-title">Top Casino Bonuses</h2>
+
       <div class="bonus-table-wrap">
         <table class="bonus-table" role="table">
           <thead>
             <tr>
-              <th>Casino</th>
-              <th>Welcome</th>
-              <th>Crypto</th>
-              <th>Wager</th>
-              <th>Claim</th>
+              <th>Casino</th><th>Welcome</th><th>Crypto</th><th>Wager</th><th></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="casino"><img src="images/thumb1.jpg" alt="" class="thumb">Ignition</td>
+              <td class="casino"><img class="thumb" src="images/icon-ignition.png" alt="">Ignition</td>
               <td>$3,000 + Spins</td>
               <td>USDT</td>
               <td>10×</td>
-              <td><a class="bonus-cta" href="#" target="_blank">Claim</a></td>
+              <td><a class="bonus-cta" href="#">Claim</a></td>
             </tr>
             <tr>
-              <td class="casino"><img src="images/thumb2.jpg" alt="" class="thumb">Stake</td>
+              <td class="casino"><img class="thumb" src="images/icon-stake.png" alt="">Stake</td>
               <td>200% Crypto</td>
               <td>Yes</td>
               <td>15×</td>
-              <td><a class="bonus-cta" href="#" target="_blank">Claim</a></td>
+              <td><a class="bonus-cta" href="#">Claim</a></td>
             </tr>
             <tr>
-              <td class="casino"><img src="images/thumb3.jpg" alt="" class="thumb">BC.Game</td>
+              <td class="casino"><img class="thumb" src="images/icon-bcgame.png" alt="">BC.Game</td>
               <td>180% Mystery</td>
               <td>Yes</td>
               <td>8×</td>
-              <td><a class="bonus-cta" href="#" target="_blank">Claim</a></td>
+              <td><a class="bonus-cta" href="#">Claim</a></td>
             </tr>
           </tbody>
         </table>
@@ -138,40 +142,40 @@
     </div>
   </section>
 
-  <!-- ABOUT + STATS -->
-  <section id="about" class="section">
+  <!-- About / What We Do -->
+  <section id="about" class="section dark">
     <div class="container about-grid">
-      <div>
-        <h2>About the SlotWhisperer</h2>
-        <p>I break down the patterns, timing, psychology, and hidden behaviors most players never notice — and I show you how to play smarter. No fluff. No fake systems. Just real insight.</p>
-        <p><a class="btn btn-outline" href="contact.html">Work with me</a></p>
+      <div class="about-left">
+        <h2>What We Do</h2>
+        <ul class="checklist">
+          <li>Explain slot mechanics in simple terms</li>
+          <li>Teach practical strategies to extend play & manage risk</li>
+          <li>Break down volatility, RTP, cycles, and bonus patterns</li>
+          <li>Provide one-on-one educational guidance</li>
+        </ul>
       </div>
-
-      <div class="about-stats">
-        <div class="stat"><strong>250+</strong><span>Monthly depositors</span></div>
-        <div class="stat"><strong>45%</strong><span>Top RevShare</span></div>
-        <div class="stat"><strong>Weekly</strong><span>Video drops</span></div>
+      <div class="about-right">
+        <h2>Who We Are</h2>
+        <p>Slot Whisperer is founded by a lifelong player and behavioral strategist who has spent years studying slot design, player psychology, and casino patterns. Our goal isn't to "beat the casino" — it's to beat confusion.</p>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS (slider) -->
-  <section id="testimonials" class="section dark">
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
     <div class="container">
-      <h2>User Testimonials</h2>
-      <div class="slider" id="testiSlider">
+      <h2 class="section-title">What People Say</h2>
+
+      <div class="slider-wrap" id="testiSlider">
         <div class="slides">
-          <div class="testimonial">
-            <p>"SlotWhisperer's breakdowns actually changed how I play — more fun, fewer losses."</p>
-            <strong>— J.R.</strong>
+          <div class="slide">
+            <blockquote class="testimonial">"Slot Whisperer's breakdowns changed how I play—more fun, fewer losses." <cite>— J.R.</cite></blockquote>
           </div>
-          <div class="testimonial">
-            <p>"I claimed a bonus and the payout was fast. Solid tips and honest reviews."</p>
-            <strong>— M.S.</strong>
+          <div class="slide">
+            <blockquote class="testimonial">"Claimed a bonus and payout was fast. Solid tips and honest reviews." <cite>— M.S.</cite></blockquote>
           </div>
-          <div class="testimonial">
-            <p>"The USDT deposit guide saved me time and fees. Highly recommend."</p>
-            <strong>— L.P.</strong>
+          <div class="slide">
+            <blockquote class="testimonial">"USDT deposit guide saved me time and fees. Highly recommend." <cite>— L.P.</cite></blockquote>
           </div>
         </div>
         <button class="slide-nav prev" data-target="testiSlider">◀</button>
@@ -180,48 +184,26 @@
     </div>
   </section>
 
-  <!-- SOCIAL / IG -->
-  <section class="section">
-    <div class="container">
-      <h2>Instagram</h2>
-      <p class="muted">Follow @slotwhisperer222 for clips and drops</p>
-
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/slotwhisperer222" data-instgrm-version="14"></blockquote>
-      <script async src="//www.instagram.com/embed.js"></script>
-    </div>
-  </section>
-
-  <!-- DISCORD WIDGET -->
-  <section class="section dark">
-    <div class="container">
-      <h2>Join Our Discord</h2>
-      <p class="muted">Community alerts, bonus drops, and live playroom.</p>
-      <!-- Replace SERVER_ID with your server's numeric ID and enable widget in server settings -->
-      <div class="discord-wrap">
-        <iframe src="https://discord.com/widget?id=SERVER_ID&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER / CONTACT -->
+  <!-- Footer with socials + contact -->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <img src="images/logo.png" alt="Logo" class="footer-logo">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="logo" class="footer-logo">
         <p>© 2025 SlotWhisperer — Play responsibly. 21+</p>
       </div>
+
       <div>
         <h4>Follow</h4>
-        <div class="social-links">
-          <a href="https://www.youtube.com/@slotwhisperer222" target="_blank">YouTube</a>
-          <a href="https://www.instagram.com/slotwhisperer222" target="_blank">Instagram</a>
-          <a href="#" target="_blank">TikTok</a>
-          <a href="#" target="_blank">Discord</a>
-        </div>
+        <a href="https://www.youtube.com/@slotwhisperer222" target="_blank">YouTube</a><br>
+        <a href="https://www.instagram.com/slotwhisperer222" target="_blank">Instagram</a><br>
+        <a href="#">TikTok</a><br>
+        <a href="#">Discord</a>
       </div>
+
       <div>
         <h4>Contact</h4>
-        <p><a href="contact.html">hello@slotwhisperer.example</a></p>
+        <a href="contact.html">Contact form</a><br>
+        <a href="mailto:hello@slotwhisperer.example">hello@slotwhisperer.example</a>
       </div>
     </div>
   </footer>
