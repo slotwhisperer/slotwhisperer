@@ -1,103 +1,225 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slot Whisperer — Professional Button Pusher</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/slot-icon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SlotWhisperer — Professional Button Pusher</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/slot-icon.png" />
+  <meta name="description" content="SlotWhisperer — slot playthroughs, honest casino reviews, crypto deposit guides, and bonus drops." />
 </head>
-
 <body>
 
-<!-- Dark Mode Toggle -->
-<div class="dark-toggle" onclick="toggleDarkMode()">🌙</div>
+  <!-- Custom cursor element (fallback if CSS cursor fails) -->
+  <div id="custom-cursor" aria-hidden="true"></div>
 
-<!-- HERO SECTION -->
-<header class="hero">
-    <div class="hero-content">
-        <h1 class="neon-title">I Talk to Slot Machines… and Sometimes They Talk Back.</h1>
-        <p class="subtitle">
-            I’m the Slot Whisperer — Professional Button Pusher.<br>
-            Yes, it’s a real job. The machines won’t play themselves.
-        </p>
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="SlotWhisperer" class="logo">
+        <div class="brand-text">SlotWhisperer</div>
+      </div>
 
-        <div class="hero-buttons">
-            <a href="https://www.youtube.com/watch?v=AaZK5l-dY4E" target="_blank" class="btn neon-btn">🎰 Watch Latest Video</a>
-            <a href="#bonuses" class="btn neon-btn-secondary">💰 Claim Bonuses</a>
-        </div>
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#videos">Videos</a>
+        <a href="#bonuses">Bonuses</a>
+        <a href="#about">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌓</button>
+      </nav>
     </div>
-</header>
+  </header>
 
-<!-- ABOUT SECTION -->
-<section class="about">
-    <h2>Who Is the Slot Whisperer?</h2>
-    <p>
-        I talk to slot machines… and sometimes they talk back.  
-        Let me show you what they’re *really* saying.
-        I break down patterns, timing, psychology, and hidden behaviors most players miss.
-        No myths. No nonsense.  
-        Just real strategy that turns normal people into absolute savages in the casino.
-    </p>
-</section>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg" role="img" aria-hidden="true"></div>
 
-<!-- YOUTUBE SECTION -->
-<section class="video-section" id="videos">
-    <h2>Latest Video</h2>
-
-    <iframe 
-        class="yt-embed"
-        src="https://www.youtube.com/embed/AaZK5l-dY4E"
-        frameborder="0" allowfullscreen>
-    </iframe>
-</section>
-
-<!-- INSTAGRAM EMBED -->
-<section class="instagram-section">
-    <h2>Follow on Instagram</h2>
-
-    <blockquote 
-        class="instagram-media"
-        data-instgrm-permalink="https://www.instagram.com/slotwhisperer222"
-        data-instgrm-version="14">
-    </blockquote>
-
-    <script async src="//www.instagram.com/embed.js"></script>
-</section>
-
-<!-- BONUS OFFERS -->
-<section class="bonuses" id="bonuses">
-    <h2>Top Casino Bonuses</h2>
-
-    <div class="bonus-grid">
-
-        <div class="bonus-card">
-            <h3>🔥 Exclusive Bonus</h3>
-            <p>Get 200% Match + 50 Free Spins</p>
-            <a href="#" class="btn neon-btn">Claim Bonus</a>
+    <!-- moving reel animation -->
+    <div class="reel-wrapper" aria-hidden="true">
+      <div class="reel">
+        <div class="reel-strip">
+          <div class="symbol">🍒</div><div class="symbol">7</div><div class="symbol">🔔</div>
+          <div class="symbol">💎</div><div class="symbol">🍋</div><div class="symbol">⭐</div>
         </div>
-
-        <div class="bonus-card">
-            <h3>🎰 High Roller Bonus</h3>
-            <p>Up to $2,000 Deposit Match</p>
-            <a href="#" class="btn neon-btn-secondary">Play Now</a>
+      </div>
+      <div class="reel">
+        <div class="reel-strip">
+          <div class="symbol">7</div><div class="symbol">🍒</div><div class="symbol">💎</div>
+          <div class="symbol">🔔</div><div class="symbol">⭐</div><div class="symbol">🍋</div>
         </div>
-
-        <div class="bonus-card">
-            <h3>💎 VIP Cashback</h3>
-            <p>Weekly 15% Cashback</p>
-            <a href="#" class="btn neon-btn">Join VIP</a>
+      </div>
+      <div class="reel">
+        <div class="reel-strip">
+          <div class="symbol">🔔</div><div class="symbol">💎</div><div class="symbol">7</div>
+          <div class="symbol">🍒</div><div class="symbol">🍋</div><div class="symbol">⭐</div>
         </div>
-
+      </div>
     </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-    <p>© 2025 Slot Whisperer — Professional Button Pusher</p>
-</footer>
+    <div class="hero-inner container">
+      <h1 class="hero-title">I Talk to Slot Machines… <span class="accent">and Sometimes They Talk Back.</span></h1>
+      <p class="hero-sub">Let me show you what they’re really saying. I’m the SlotWhisperer — Professional Button Pusher.</p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.youtube.com/watch?v=AaZK5l-dY4E" target="_blank" rel="noopener">🎥 Watch Latest</a>
+        <a class="btn btn-ghost" href="#bonuses">💰 Claim Bonuses</a>
+      </div>
+
+      <div class="hero-meta">
+        <span>USDT payouts</span>
+        <span>Weekly drops</span>
+        <span>No BS reviews</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS / Auto-feed (uses channel handle fallback) -->
+  <section id="videos" class="section">
+    <div class="container">
+      <h2>Latest Uploads</h2>
+      <p class="muted">Auto-loading the newest videos from the channel.</p>
+
+      <div id="ytFeed" class="yt-grid">
+        <!-- JS will populate video cards here from channel URL or playlist fallback -->
+        <div class="yt-placeholder">Loading videos…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BONUS TABLE -->
+  <section id="bonuses" class="section dark">
+    <div class="container">
+      <h2>Top Casino Bonuses — Quick Comparison</h2>
+      <div class="bonus-table-wrap">
+        <table class="bonus-table" role="table">
+          <thead>
+            <tr>
+              <th>Casino</th>
+              <th>Welcome</th>
+              <th>Crypto</th>
+              <th>Wager</th>
+              <th>Claim</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="casino"><img src="images/thumb1.jpg" alt="" class="thumb">Ignition</td>
+              <td>$3,000 + Spins</td>
+              <td>USDT</td>
+              <td>10×</td>
+              <td><a class="bonus-cta" href="#" target="_blank">Claim</a></td>
+            </tr>
+            <tr>
+              <td class="casino"><img src="images/thumb2.jpg" alt="" class="thumb">Stake</td>
+              <td>200% Crypto</td>
+              <td>Yes</td>
+              <td>15×</td>
+              <td><a class="bonus-cta" href="#" target="_blank">Claim</a></td>
+            </tr>
+            <tr>
+              <td class="casino"><img src="images/thumb3.jpg" alt="" class="thumb">BC.Game</td>
+              <td>180% Mystery</td>
+              <td>Yes</td>
+              <td>8×</td>
+              <td><a class="bonus-cta" href="#" target="_blank">Claim</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT + STATS -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div>
+        <h2>About the SlotWhisperer</h2>
+        <p>I break down the patterns, timing, psychology, and hidden behaviors most players never notice — and I show you how to play smarter. No fluff. No fake systems. Just real insight.</p>
+        <p><a class="btn btn-outline" href="contact.html">Work with me</a></p>
+      </div>
+
+      <div class="about-stats">
+        <div class="stat"><strong>250+</strong><span>Monthly depositors</span></div>
+        <div class="stat"><strong>45%</strong><span>Top RevShare</span></div>
+        <div class="stat"><strong>Weekly</strong><span>Video drops</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (slider) -->
+  <section id="testimonials" class="section dark">
+    <div class="container">
+      <h2>User Testimonials</h2>
+      <div class="slider" id="testiSlider">
+        <div class="slides">
+          <div class="testimonial">
+            <p>"SlotWhisperer's breakdowns actually changed how I play — more fun, fewer losses."</p>
+            <strong>— J.R.</strong>
+          </div>
+          <div class="testimonial">
+            <p>"I claimed a bonus and the payout was fast. Solid tips and honest reviews."</p>
+            <strong>— M.S.</strong>
+          </div>
+          <div class="testimonial">
+            <p>"The USDT deposit guide saved me time and fees. Highly recommend."</p>
+            <strong>— L.P.</strong>
+          </div>
+        </div>
+        <button class="slide-nav prev" data-target="testiSlider">◀</button>
+        <button class="slide-nav next" data-target="testiSlider">▶</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL / IG -->
+  <section class="section">
+    <div class="container">
+      <h2>Instagram</h2>
+      <p class="muted">Follow @slotwhisperer222 for clips and drops</p>
+
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/slotwhisperer222" data-instgrm-version="14"></blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </div>
+  </section>
+
+  <!-- DISCORD WIDGET -->
+  <section class="section dark">
+    <div class="container">
+      <h2>Join Our Discord</h2>
+      <p class="muted">Community alerts, bonus drops, and live playroom.</p>
+      <!-- Replace SERVER_ID with your server's numeric ID and enable widget in server settings -->
+      <div class="discord-wrap">
+        <iframe src="https://discord.com/widget?id=SERVER_ID&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTACT -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="images/logo.png" alt="Logo" class="footer-logo">
+        <p>© 2025 SlotWhisperer — Play responsibly. 21+</p>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@slotwhisperer222" target="_blank">YouTube</a>
+          <a href="https://www.instagram.com/slotwhisperer222" target="_blank">Instagram</a>
+          <a href="#" target="_blank">TikTok</a>
+          <a href="#" target="_blank">Discord</a>
+        </div>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><a href="contact.html">hello@slotwhisperer.example</a></p>
+      </div>
+    </div>
+  </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
