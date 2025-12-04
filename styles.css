@@ -19,6 +19,25 @@ body{
 }
 
 .container{width:92%;max-width:1200px;margin:0 auto}
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
 
 /* HEADER */
 .site-header{
