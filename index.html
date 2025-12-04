@@ -1,29 +1,250 @@
-Step	What to Do	Why It Matters
-1	Replace plain hero background with a full-screen casino/neon-style hero image or short video loop (make sure it’s optimized for fast load).	First impression — a strong hero grabs attention and sets mood immediately. 
-GitHub
-+1
-2	Add 1–2 big CTA buttons in hero (e.g. “Watch Latest Video”, “Claim Bonus”) with bold contrasting colors.	Guides visitor to take action — conversion depends on clear CTAs. 
-Blog Brewer
-+1
-3	Embed a YouTube playlist or latest videos — maybe a “Latest Wins” / “Slot Plays” section.	Video + social content builds trust and shows you’re active; boosts engagement. 
-Search Engine Watch
-+1
-4	Add a short “About Slot Whisperer” section — who you are, what you do, why people should follow you.	Helps new visitors understand what you’re about immediately. 
-offlensdesign.com
-+1
-5	Build a “Top Bonuses / Casino Offers” section — neat cards or boxes with bonuses, CTA links, descriptions.	Makes monetization obvious and easy for users; increases affiliate conversions.
-6	Clean up layout & spacing, add modern fonts, use consistent colors to match your brand (neon-retro or whatever vibe).	Makes site look professional instead of cheap — aesthetic matters for trust. 
-offlensdesign.com
-+1
-7	Make site responsive — check mobile and desktop; ensure hero, buttons, video and text scale well.	Many users browse on phone — if it breaks there, you lose them immediately. 
-Medium
-+1
-8	Optimize images/videos (compress, correct sizes) — avoid long loading times or slow page speed.	Speed influences bounce rate, user experience, and SEO. 
-Blog Brewer
-+1
-9	Add social links (YouTube, TikTok, Instagram, Discord) in header or footer — let people connect with you easily.	Builds credibility, trust, and audience growth. 
-Tiiny Host
-+1
-10	Optionally add testimonials, disclaimers, “responsible gambling” notice, and maybe a simple contact or email-capture form.	Adds social proof + trust/credibility + legal safety. 
-119 Web Design
-+1
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Slot Whisperer — Professional Button Pusher</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="SlotWhisperer" class="logo">
+        <div class="brand-text">SlotWhisperer</div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#videos">Videos</a>
+        <a href="#bonuses">Bonuses</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" class="icon-btn" title="Toggle dark mode">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-neon neon-anim"></div>
+    <div class="hero-inner container">
+      <h1 class="hero-title">I Talk to Slot Machines… <span class="accent">and Sometimes They Talk Back.</span></h1>
+      <p class="hero-sub">Let me show you what they’re really saying. <strong>Professional Button Pusher.</strong></p>
+
+      <div class="hero-ctas">
+        <a href="#videos" class="btn btn-glow">🎥 Watch Latest</a>
+        <a href="#bonuses" class="btn btn-outline">💰 Claim Bonus</a>
+      </div>
+
+      <div class="hero-meta">
+        <div class="meta-item">USDT payouts</div>
+        <div class="meta-item">Weekly drops</div>
+        <div class="meta-item">No BS reviews</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS (slider + embed) -->
+  <section id="videos" class="section">
+    <div class="container">
+      <h2>Latest Videos</h2>
+      <p class="muted">Playthroughs, breakdowns & big wins — updated weekly.</p>
+
+      <!-- video slider -->
+      <div class="slider" id="videoSlider">
+        <div class="slides">
+          <!-- VIDEO SLIDE 1 -->
+          <div class="slide">
+            <div class="video-card">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+              <h3>Big Win On Lucky Reels</h3>
+            </div>
+          </div>
+          <!-- VIDEO SLIDE 2 -->
+          <div class="slide">
+            <div class="video-card">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+              <h3>Bonus Hunt Breakdown</h3>
+            </div>
+          </div>
+          <!-- VIDEO SLIDE 3 -->
+          <div class="slide">
+            <div class="video-card">
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+              <h3>How I Deposit USDT</h3>
+            </div>
+          </div>
+        </div>
+
+        <button class="slide-nav prev" data-target="videoSlider">◀</button>
+        <button class="slide-nav next" data-target="videoSlider">▶</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIKTOK EMBED -->
+  <section class="section dark">
+    <div class="container">
+      <h2>Shorts & Reels</h2>
+      <p class="muted">Quick clips — follow on TikTok for instant drops.</p>
+      <!-- TikTok embed (replace with your post link) -->
+      <div class="tiktok-grid">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@yourhandle/video/VIDEOID" data-video-id="VIDEOID" style="max-width:605px;">
+          <a target="_blank" href="https://www.tiktok.com/@yourhandle">TikTok</a>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- BONUSES (comparison table + slider) -->
+  <section id="bonuses" class="section">
+    <div class="container">
+      <h2>Top Casino Bonuses — Comparison</h2>
+      <p class="muted">Hand-picked offers, updated weekly.</p>
+
+      <div class="bonus-table-wrap">
+        <table class="bonus-table">
+          <thead>
+            <tr>
+              <th>Casino</th>
+              <th>Welcome Bonus</th>
+              <th>Crypto Friendly</th>
+              <th>Wagering</th>
+              <th>Play Now</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="images/thumb1.jpg" alt="" class="thumb">Ignition</td>
+              <td>$3,000 + Spins</td>
+              <td>Yes (USDT)</td>
+              <td>10×</td>
+              <td><a class="bonus-cta" href="#" target="_blank">Claim</a></td>
+            </tr>
+            <tr>
+              <td><img src="images/thumb2.jpg" alt="" class="thumb">Stake</td>
+              <td>200% Crypto Match</td>
+              <td>Yes</td>
+              <td>15×</td>
+              <td><a class="bonus-cta" href="#" target="_blank">Claim</a></td>
+            </tr>
+            <tr>
+              <td><img src="images/thumb3.jpg" alt="" class="thumb">BC.Game</td>
+              <td>180% + Mystery</td>
+              <td>Yes</td>
+              <td>8×</td>
+              <td><a class="bonus-cta" href="#" target="_blank">Claim</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- bonus slider (mobile friendly) -->
+      <div class="bonus-slider" id="bonusSlider">
+        <div class="slides">
+          <div class="slide card">
+            <img src="images/thumb1.jpg" alt="">
+            <h4>Ignition — $3,000</h4>
+            <a href="#" class="bonus-cta">Claim</a>
+          </div>
+          <div class="slide card">
+            <img src="images/thumb2.jpg" alt="">
+            <h4>Stake — 200%</h4>
+            <a href="#" class="bonus-cta">Claim</a>
+          </div>
+          <div class="slide card">
+            <img src="images/thumb3.jpg" alt="">
+            <h4>BC.Game — 180%</h4>
+            <a href="#" class="bonus-cta">Claim</a>
+          </div>
+        </div>
+        <button class="slide-nav prev" data-target="bonusSlider">◀</button>
+        <button class="slide-nav next" data-target="bonusSlider">▶</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section dark">
+    <div class="container about-grid">
+      <div>
+        <h2>About the Slot Whisperer</h2>
+        <p>I break down patterns, timing, psychology, and the hidden behaviors most players never notice. I teach how to play smarter — not magic. Join the community and level up your play.</p>
+        <a href="#contact" class="btn btn-outline">Join Discord</a>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><strong>250+</strong><span>Monthly depositors</span></div>
+        <div class="stat"><strong>45%</strong><span>Top RevShare</span></div>
+        <div class="stat"><strong>Weekly</strong><span>Video drops</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2>User Testimonials</h2>
+      <div class="testimonial-slider" id="testiSlider">
+        <div class="slides">
+          <div class="testimonial">
+            <p>"Slot Whisperer's breakdowns actually changed how I play — more fun, fewer losses."</p>
+            <strong>— J.R.</strong>
+          </div>
+          <div class="testimonial">
+            <p>"I claimed the Ignition bonus through the link and it was fast payout. Solid tips."</p>
+            <strong>— M.S.</strong>
+          </div>
+          <div class="testimonial">
+            <p>"The USDT deposit guide saved me time and fees. Highly recommend."</p>
+            <strong>— L.P.</strong>
+          </div>
+        </div>
+        <button class="slide-nav prev" data-target="testiSlider">◀</button>
+        <button class="slide-nav next" data-target="testiSlider">▶</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCORD EMBED -->
+  <section class="section dark">
+    <div class="container">
+      <h2>Join Our Discord</h2>
+      <p class="muted">Community play alerts, bonus drops, and exclusive access.</p>
+
+      <!-- Replace SERVER_ID with your Discord server numeric ID; widget must be enabled -->
+      <iframe src="https://discord.com/widget?id=SERVER_ID&theme=dark" width="100%" height="400" allowtransparency="true" frameborder="0"></iframe>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Get in Touch</h3>
+        <p>Questions, sponsorships, or collabs — email <a href="mailto:hello@slotwhisperer.example">hello@slotwhisperer.example</a></p>
+      </div>
+      <div>
+        <h3>Follow</h3>
+        <div class="socials">
+          <a href="#" class="btn-link">YouTube</a>
+          <a href="#" class="btn-link">TikTok</a>
+          <a href="#" class="btn-link">Instagram</a>
+          <a href="#" class="btn-link">Discord</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>© 2025 SlotWhisperer — Play responsibly. 21+</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
