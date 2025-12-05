@@ -4,16 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SlotWhisperer — Play Smart</title>
-  <link rel="icon" href="images/favicon.png">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="styles.css?v=3">
   <meta name="description" content="SlotWhisperer — slot playthroughs, honest casino reviews, bonus drops and strategy." />
 </head>
 <body>
 
-  <!-- fixed header / navbar -->
+  <!-- custom cursor fallback element (hidden if CSS cursor works) -->
+  <div id="custom-cursor" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="nav-inner container">
-      <a class="brand" href="index.html"><img src="images/logo.png" alt="SlotWhisperer" class="logo"><span>SlotWhisperer</span></a>
+      <a class="brand" href="index.html">
+        <img src="images/logo.jpg" alt="SlotWhisperer" class="logo">
+        <span class="brand-text">SlotWhisperer</span>
+      </a>
 
       <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
         <a href="#home">Home</a>
@@ -26,169 +32,215 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <button id="hamburger" class="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button id="hamburger" class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-inner container">
-      <div class="hero-badge">SMART PLAY INSIGHTS</div>
-      <h1 class="hero-title">I talk to slot machines… and sometimes they talk back.<br><span class="hero-accent">Let me show you what they’re really saying.</span></h1>
-      <p class="hero-sub">Slot Whisperer gives players clarity, confidence, and data-driven insights to maximize their casino experience. We don't promise wins — we teach smart play.</p>
+  <!-- HERO with animated reels -->
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-overlay" role="img" aria-hidden="true"></div>
 
-      <div class="hero-ctas">
-        <a class="btn primary" href="https://www.youtube.com/watch?v=AaZK5l-dY4E" target="_blank" rel="noopener">🎥 Watch Latest</a>
-        <a class="btn outline" href="#bonuses">💰 View Bonuses</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- "Choose your Winning Path" features (three columns) -->
-  <section class="features section">
-    <div class="container features-grid">
-      <div class="feature-card">
-        <h3>Top Casino Reviews</h3>
-        <p>Unbiased, deep-dive analysis of the highest-rated crypto and fiat casinos.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Exclusive Bonuses</h3>
-        <p>Secret codes and VIP welcome packages you won't find anywhere else.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Slot Game Guides</h3>
-        <p>RTP breakdowns, volatility guides, and strategy for top slots.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- VLOG / WATCH GRID -->
-  <section id="watch" class="section dark">
-    <div class="container">
-      <h2 class="section-title">Watch — Latest Vlogs</h2>
-      <div class="vlog-grid">
-        <article class="vlog-card">
-          <figure><img src="images/thumb1.jpg" alt=""></figure>
-          <div class="vlog-meta">
-            <time>12:34</time>
-            <span>3.2k views</span>
-          </div>
-          <h3>How RTP Really Works: The Math Behind Your Odds</h3>
-        </article>
-
-        <article class="vlog-card">
-          <figure><img src="images/thumb2.jpg" alt=""></figure>
-          <div class="vlog-meta">
-            <time>15:22</time>
-            <span>2.8k views</span>
-          </div>
-          <h3>Volatility Cycles Explained: When to Hold & When to Fold</h3>
-        </article>
-
-        <article class="vlog-card">
-          <figure><img src="images/thumb3.jpg" alt=""></figure>
-          <div class="vlog-meta">
-            <time>18:45</time>
-            <span>4.1k views</span>
-          </div>
-          <h3>Casino Psychology: Why You Keep Playing (And How to Stop)</h3>
-        </article>
-      </div>
-
-      <div class="center"><a class="btn ghost" href="https://www.youtube.com/@slotwhisperer222" target="_blank">View All Vlogs</a></div>
-    </div>
-  </section>
-
-  <!-- BONUSES table -->
-  <section id="bonuses" class="section">
-    <div class="container">
-      <h2 class="section-title">Top Casino Bonuses</h2>
-
-      <div class="bonus-table-wrap">
-        <table class="bonus-table" role="table">
-          <thead>
-            <tr>
-              <th>Casino</th><th>Welcome</th><th>Crypto</th><th>Wager</th><th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="casino"><img class="thumb" src="images/icon-ignition.png" alt="">Ignition</td>
-              <td>$3,000 + Spins</td>
-              <td>USDT</td>
-              <td>10×</td>
-              <td><a class="bonus-cta" href="#">Claim</a></td>
-            </tr>
-            <tr>
-              <td class="casino"><img class="thumb" src="images/icon-stake.png" alt="">Stake</td>
-              <td>200% Crypto</td>
-              <td>Yes</td>
-              <td>15×</td>
-              <td><a class="bonus-cta" href="#">Claim</a></td>
-            </tr>
-            <tr>
-              <td class="casino"><img class="thumb" src="images/icon-bcgame.png" alt="">BC.Game</td>
-              <td>180% Mystery</td>
-              <td>Yes</td>
-              <td>8×</td>
-              <td><a class="bonus-cta" href="#">Claim</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- About / What We Do -->
-  <section id="about" class="section dark">
-    <div class="container about-grid">
-      <div class="about-left">
-        <h2>What We Do</h2>
-        <ul class="checklist">
-          <li>Explain slot mechanics in simple terms</li>
-          <li>Teach practical strategies to extend play & manage risk</li>
-          <li>Break down volatility, RTP, cycles, and bonus patterns</li>
-          <li>Provide one-on-one educational guidance</li>
-        </ul>
-      </div>
-      <div class="about-right">
-        <h2>Who We Are</h2>
-        <p>Slot Whisperer is founded by a lifelong player and behavioral strategist who has spent years studying slot design, player psychology, and casino patterns. Our goal isn't to "beat the casino" — it's to beat confusion.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials" class="section">
-    <div class="container">
-      <h2 class="section-title">What People Say</h2>
-
-      <div class="slider-wrap" id="testiSlider">
-        <div class="slides">
-          <div class="slide">
-            <blockquote class="testimonial">"Slot Whisperer's breakdowns changed how I play—more fun, fewer losses." <cite>— J.R.</cite></blockquote>
-          </div>
-          <div class="slide">
-            <blockquote class="testimonial">"Claimed a bonus and payout was fast. Solid tips and honest reviews." <cite>— M.S.</cite></blockquote>
-          </div>
-          <div class="slide">
-            <blockquote class="testimonial">"USDT deposit guide saved me time and fees. Highly recommend." <cite>— L.P.</cite></blockquote>
+      <div class="hero-reels" aria-hidden="true">
+        <div class="reel" data-speed="1.8">
+          <div class="reel-strip">
+            <div class="symbol">🍒</div><div class="symbol">7</div><div class="symbol">🔔</div>
+            <div class="symbol">💎</div><div class="symbol">🍋</div><div class="symbol">⭐</div>
           </div>
         </div>
-        <button class="slide-nav prev" data-target="testiSlider">◀</button>
-        <button class="slide-nav next" data-target="testiSlider">▶</button>
+        <div class="reel" data-speed="1.6">
+          <div class="reel-strip">
+            <div class="symbol">7</div><div class="symbol">🍒</div><div class="symbol">💎</div>
+            <div class="symbol">🔔</div><div class="symbol">⭐</div><div class="symbol">🍋</div>
+          </div>
+        </div>
+        <div class="reel" data-speed="2.0">
+          <div class="reel-strip">
+            <div class="symbol">🔔</div><div class="symbol">💎</div><div class="symbol">7</div>
+            <div class="symbol">🍒</div><div class="symbol">🍋</div><div class="symbol">⭐</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Footer with socials + contact -->
+      <div class="hero-inner container">
+        <div class="hero-badge">SMART PLAY INSIGHTS</div>
+        <h1 class="hero-title">I talk to slot machines… <span class="accent">and sometimes they talk back.</span></h1>
+        <p class="hero-sub">Let me show you what they’re really saying. Data-driven insights, honest reviews, and practical strategies — no fluff.</p>
+
+        <div class="hero-ctas">
+          <a class="btn primary" href="https://www.youtube.com/watch?v=AaZK5l-dY4E" target="_blank" rel="noopener">🎥 Watch Latest</a>
+          <a class="btn outline" href="#bonuses">💰 View Bonuses</a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>45%</strong><span>Top RevShare</span></div>
+          <div><strong>Weekly</strong><span>Vlog Drops</span></div>
+          <div><strong>USDT</strong><span>Payouts</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features / Choose your path -->
+    <section class="features section">
+      <div class="container features-grid">
+        <div class="feature-card">
+          <h3>Top Casino Reviews</h3>
+          <p>Unbiased deep-dive analysis for crypto and fiat casinos.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Exclusive Bonuses</h3>
+          <p>VIP codes, secret promos, and the best conversion links.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Slot Guides</h3>
+          <p>RTP, volatility, and strategic playbooks for top slots.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VLOG grid (watch) -->
+    <section id="watch" class="section dark">
+      <div class="container">
+        <h2 class="section-title">Latest Vlogs</h2>
+
+        <div class="vlog-grid" id="vlogGrid">
+          <article class="vlog-card">
+            <figure>
+              <img src="images/thumb1.jpg" alt="vlog 1" onerror="this.onerror=null; this.src='images/THUMB1.PNG'">
+              <div class="play-overlay">▶</div>
+            </figure>
+            <div class="vlog-meta"><time>12:34</time><span>3.2k views</span></div>
+            <h3>How RTP Really Works: The Math Behind Your Odds</h3>
+          </article>
+
+          <article class="vlog-card">
+            <figure>
+              <img src="images/thumb2.jpg" alt="vlog 2" onerror="this.onerror=null; this.src='images/THUMB2.PNG'">
+              <div class="play-overlay">▶</div>
+            </figure>
+            <div class="vlog-meta"><time>15:22</time><span>2.8k views</span></div>
+            <h3>Volatility Cycles Explained: When to Hold & When to Fold</h3>
+          </article>
+
+          <article class="vlog-card">
+            <figure>
+              <!-- thumb3 fallback handles your THUMB3.PNG if not renamed -->
+              <img src="images/thumb3.jpg" alt="vlog 3" onerror="this.onerror=null; this.src='images/THUMB3.PNG'">
+              <div class="play-overlay">▶</div>
+            </figure>
+            <div class="vlog-meta"><time>18:45</time><span>4.1k views</span></div>
+            <h3>Casino Psychology: Why You Keep Playing (And How to Stop)</h3>
+          </article>
+        </div>
+
+        <div class="center" style="margin-top:22px;">
+          <a class="btn ghost" href="https://www.youtube.com/@slotwhisperer222" target="_blank">View All Vlogs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bonus comparison table -->
+    <section id="bonuses" class="section">
+      <div class="container">
+        <h2 class="section-title">Top Casino Bonuses — Quick Compare</h2>
+
+        <div class="bonus-table-wrap">
+          <table class="bonus-table" role="table">
+            <thead>
+              <tr><th>Casino</th><th>Welcome</th><th>Crypto</th><th>Wager</th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="casino"><img class="thumb" src="images/icon-ignition.png" alt="" onerror="this.style.display='none'">Ignition</td>
+                <td>$3,000 + Spins</td><td>USDT</td><td>10×</td>
+                <td><a class="bonus-cta" href="#" target="_blank" rel="noopener">Claim</a></td>
+              </tr>
+              <tr>
+                <td class="casino"><img class="thumb" src="images/icon-stake.png" alt="" onerror="this.style.display='none'">Stake</td>
+                <td>200% Crypto</td><td>Yes</td><td>15×</td>
+                <td><a class="bonus-cta" href="#" target="_blank" rel="noopener">Claim</a></td>
+              </tr>
+              <tr>
+                <td class="casino"><img class="thumb" src="images/icon-bcgame.png" alt="" onerror="this.style.display='none'">BC.Game</td>
+                <td>180% Mystery</td><td>Yes</td><td>8×</td>
+                <td><a class="bonus-cta" href="#" target="_blank" rel="noopener">Claim</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section dark">
+      <div class="container about-grid">
+        <div class="about-left">
+          <h2>What We Do</h2>
+          <ul class="checklist">
+            <li>Explain slot mechanics in simple terms</li>
+            <li>Teach practical strategies to extend play & manage risk</li>
+            <li>Break down volatility, RTP, cycles, and bonus patterns</li>
+            <li>Provide one-on-one educational guidance</li>
+          </ul>
+        </div>
+
+        <div class="about-right">
+          <h2>Who We Are</h2>
+          <p>Founded by a lifelong player and behavioral strategist — we don't promise wins. We teach how to play smarter and stay in control.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials slider -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <h2 class="section-title">What People Say</h2>
+
+        <div class="slider-wrap" id="testiSlider">
+          <div class="slides">
+            <div class="slide"><blockquote class="testimonial">"Changed how I play — more fun, fewer losses." <cite>— J.R.</cite></blockquote></div>
+            <div class="slide"><blockquote class="testimonial">"Solid tips and honest reviews." <cite>— M.S.</cite></blockquote></div>
+            <div class="slide"><blockquote class="testimonial">"USDT deposit guide saved me time and fees." <cite>— L.P.</cite></blockquote></div>
+          </div>
+          <button class="slide-nav prev" data-target="testiSlider">◀</button>
+          <button class="slide-nav next" data-target="testiSlider">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discord placeholder and socials -->
+    <section class="section dark">
+      <div class="container">
+        <h2 class="section-title">Community</h2>
+        <p class="muted">Join Discord for drops, alerts, and live plays.</p>
+        <div class="discord-wrap">
+          <!-- Replace SERVER_ID with your server numeric ID and enable widget -->
+          <iframe src="https://discord.com/widget?id=SERVER_ID&theme=dark" width="100%" height="320" allowtransparency="true" frameborder="0"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p>For partnerships, sponsorships, or press — hello@slotwhisperer.example</p>
+
+        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+          <label>Name <input name="name" required></label>
+          <label>Email <input name="_replyto" type="email" required></label>
+          <label>Message <textarea name="message" rows="5" required></textarea></label>
+          <button class="btn primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="images/logo.png" alt="logo" class="footer-logo">
+        <img src="images/logo.jpg" alt="logo" class="footer-logo">
         <p>© 2025 SlotWhisperer — Play responsibly. 21+</p>
       </div>
 
@@ -202,12 +254,12 @@
 
       <div>
         <h4>Contact</h4>
-        <a href="contact.html">Contact form</a><br>
-        <a href="mailto:hello@slotwhisperer.example">hello@slotwhisperer.example</a>
+        <a href="mailto:hello@slotwhisperer.example">hello@slotwhisperer.example</a><br>
+        <a href="contact.html">Contact form</a>
       </div>
     </div>
   </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>
