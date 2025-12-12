@@ -1,2 +1,2 @@
-# SlotWhisperer
+# Blackbeardsoul
 Official website project
